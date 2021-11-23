@@ -1,1 +1,1 @@
-Where I shill myself to FAANG overlords while crying about my grades.
+Where I try to convince myself that grades don't matter.
