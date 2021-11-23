@@ -41,6 +41,10 @@ footer_links:
   - title: GitHub
     url: https://github.com/jamesyeap
     icon: fa fa-github-square
+    
+   - title: LinkedIn
+    url: https://www.linkedin.com/in/jamesyeap/
+    icon: fa fa-linkedin-square
 
 # Enter your copyright text if you wish to override the default one.
 #copyright: "This site is made with <3 by *me, myself, and I*."
