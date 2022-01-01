@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Some notes on React Query
-categories: [content, demo]
+categories: [react, react-query]
 ---
 
 Network requests was perhaps one of the more annoying issues that I faced when making applications in React. So I spent some time learning how to use an increasingly popular package called `React Query`, which is quite useful in helping you keep your application in-sync with the backend.
