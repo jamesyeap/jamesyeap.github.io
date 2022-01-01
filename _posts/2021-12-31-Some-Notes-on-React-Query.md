@@ -81,7 +81,7 @@ const queryInfo = useQuery('queryKey', queryFn, {
 When multiple components call `useQuery` using the same `queryKey`, only 1 actual-request will be made, which saves data.
 
 For example,
-```javscript
+```javascript
 const queryKey = 'pokemon';
 
 const queryInfo_A = useQuery(queryKey, queryFn);
