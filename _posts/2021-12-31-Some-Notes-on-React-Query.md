@@ -14,6 +14,16 @@ This is what I learnt (you're welcome future self).
 ## Using DevTools for React Query
 ```javascript
 import { ReactQueryDevtools } from 'react-query/devtools'
+
+// place ReactQueryDevtools as high-up your components as possible
+function App() {
+	return (
+		<div>
+			<ReactQueryDevtools />
+			{/* your other components here */}
+		</div>
+	)
+}
 ```
 This is really useful for seeing the status of your Queries (ie have they completed successfully, or if not, what the error code returned was, etc).
 
