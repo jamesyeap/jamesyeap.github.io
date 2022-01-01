@@ -3,7 +3,6 @@ layout: post
 title: Some notes on React Query
 categories: [react, react-query]
 ---
-
 Network requests was perhaps one of the more annoying issues that I faced when making applications in React. So I spent some time learning how to use an increasingly popular package called `React Query`, which is quite useful in helping you keep your application in-sync with the backend.
 
 I found it especially useful because now, instead of getting intrusive thoughts of just deleting my entire repository and starting anew out of pure frustration 5 times a day, I now get them 4 times.
@@ -12,12 +11,11 @@ A whopping 20% reduction!
 
 This is what I learnt (you're welcome future self).
 
-# Notes on React Query
-
 ## Using DevTools for React Query
 ```javascript
 import { ReactQueryDevtools } from 'react-query/devtools'
 ```
+This is really useful for seeing the status of your Queries (ie have they completed successfully, or if not, what the error code returned was, etc).
 
 ## Refetching Behavior
 By default, Queries are automatically re-fetched every time the user clicks on the window. 
