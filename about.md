@@ -1,7 +1,12 @@
 ---
+title: James Yeap
+permalink: /about/
 layout: page
-title: About
-permalink: /about
+excerpt: Hello I'm James, a third-year undergraduate at the National University of Singapore majoring in Computer Science.
+comments: false
 ---
 
-Brb mugging for exams.
+Hello I'm James, a third-year undergraduate at the National University of Singapore majoring in Computer Science.
+
+**more about me**
+- github.com/jamesyeap

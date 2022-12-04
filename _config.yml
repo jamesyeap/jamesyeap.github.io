@@ -1,92 +1,91 @@
-#
-# This file contains configuration flags to customize your site
-#
+# Site settings
+title: Klise Theme # site title
+description: >- # site description
+  He's writing in Bahasa about web technology and experience as a journal 
+  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+lang: en-US # default lang
+timezone: Asia/Jakarta # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
+mode: dark # default theme "dark" | "light"
 
-# Name of your site (displayed in the header)
-name: James Yeap
+# Profile settings
+author:
+  name: James Yeap # author name
+  bio: >- # tell to the world
+    Hello!
+  username: username # general username
+  github: github_username # github username
+  twitter: twitter_username # twitter username
+  facebook: facebook_username # facebook username
+  email: your-email@email.com # email adress
+  avatar: /assets/img/avatar.jpg # change with your own avatar
 
-# Short bio or description (displayed in the header)
-description: If you aren't subsisting solely on ramen and desperation, are you really in college?
+# URL settings
+url: "https://klise.now.sh" #
+baseurl:
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /assets/image/avatar.png
+# Collection setting
+collections:
+  posts:
+    output: true
 
-#
-# Flags below are optional
-#
-
-# Your website URL (e.g. https://forever-jekyll.github.io or https://forever-jekyll.com)
-# Used for Sitemap.xml and your RSS feed
-url: jamesyeap.com
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
-
-# Navigation menu
-navigation_links:
-  - title: Blog
-    url: /
-
-  - title: About
-    url: /about
-
-  - title: Search
-    url: /search
-
-# Footer icons
-footer_links:
-  - title: GitHub
-    url: https://github.com/jamesyeap
-    icon: fa fa-github-square
-    
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/jamesyeap/
-    icon: fa fa-linkedin-square
-
-# Enter your copyright text if you wish to override the default one.
-#copyright: "This site is made with <3 by *me, myself, and I*."
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
-permalink: pretty
-
-# Jekyll 3 now only supports Kramdown for Markdown
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now support rouge for syntax highlighting
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
 
-# Pagination
-paginate: 5
-paginate_path: "/page/:num/"
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
 
-# Set the Sass partials directory, as we're using @imports
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
 sass:
-  sass_dir: _sass
-  style: :expanded # You might prefer to minify using :compressed
+  style: compressed
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jemoji
+include:
+  - _redirects
+  - .htaccess
 
-# Exclude these files from your production _site
 exclude:
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - CHANGELOG.md
   - README.md
-  - CNAME
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
